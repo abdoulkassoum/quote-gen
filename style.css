@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+body{
+    background-color: red;
+}
+.emballage{
+    width: 600px;
+    border: 1px solid white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+}
+.container{
+    width: 100%;
+    background-color: green;
+    padding: 1em;
+    box-shadow: 0 20px 65px rgb(87, 11, 16, 0.5);
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+
+
+}
+.container::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 120%;
+    background-color: yellow;
+    z-index: -1;
+    top: -10%;
+    left: 10%;
+
+}
+.container p{
+    line-height: 2;
+    font-size: 30px;
+    padding: 0 40px;
+
+}
+.container h3{
+    margin: 20px 0 60px 0;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.container button{
+    background: linear-gradient(0.25turn, #e42121, #11e735, #eff70f);
+    border: none;
+    padding: 15px 45px;
+    border-radius: 5px;
+    font-size:18px ;
+    font-weight: 600;
+    cursor: pointer;
+
+}

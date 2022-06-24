@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>citations</title>
+</head>
+<body>
+   <div class="emballage">
+       <div class="container">
+        <p id="citationss"></p>
+        <h3 id="auteur">-President BOBO</h3>
+        <button onclick="generate()" id="btn">Nouvelle citations</button>
+       </div>
+      
+   </div>
+   
+    <script>
+      // variables
+       const citations = document.getElementById("citationss");
+       const auteurs = document.getElementById("auteur");
+       const btn = document.getElementById("btn");
+    //tableau de citations
+      let quote = [
+          `"La chenille ne porte pas de lunettes quand elle bois l'eau".`,
+          " \"La chasse est comme le football, un sport d'endurence et de précision\".",
+          " \"l'oiseau sur le baobab ne doit pas oublier qu'il à porté des lunettes\".",
+          " \" Regardez-moi les yeux,phacocheres\".",
+            " \"Qui à fait plus pour l'image de la colombie que ..... Chakira ! voilà même un grand footballeur\".",
+            " \" La France nous a souvent volé nos richesses... vous allez aussi nous voler nos footballeur ?\".",
+        ];
+//fonction generatrice
+        function generate(){
+          let citation = quote[Math.floor(Math.random() * quote.length)];
+        citations.textContent = citation
+        }
+       generate();
+    </script>
+</body>
+</html>
